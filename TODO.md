@@ -1,4 +1,10 @@
 
+# TODO
+
+Add something to DividerFactory to implement MD table justification
+
+# Done
+
 - create a DividerFactory:
   - like RowFactory. takes a TableLayout + ColumnLayouts
   - getSimpleDivider(char)

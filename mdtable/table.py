@@ -2,6 +2,7 @@
 import collections
 from mdtable.layout import TableLayout, ColumnLayout
 from mdtable.rowfactory import RowFactory
+from mdtable.divfactory import DividerFactory
 
 class NoSuchColumnError(Exception):
     def __self__(self, key):
@@ -28,6 +29,10 @@ class MarkdownTable:
         self._entries = []
         self.brStr = '<br>'
         self.colDivStr = '|'
+        self.startDiv = None
+        self.headerDiv = None
+        self.rowDiv = None
+        self.endDiv = None
     
     def addRow(self, data):
         self._entries.append({
@@ -96,11 +101,19 @@ class MarkdownTable:
                 rPad = self.cols[colKey].rPad
             )
         
+        df = DividerFactory(tl)
+        
+        if self.startDiv is not None:
+            print( df.getSimpleDivider(self.startDiv) )
+        
         hf = RowFactory(tl, allowWrap=False)
         for colKey in self.cols.keys():
             hf[colKey] = self.cols[colKey].title
         for line in hf.nextRow().lines:
             print( line )
+        
+        if self.headerDiv is not None:
+            print( df.getSimpleDivider(self.headerDiv) )
         
         rf = RowFactory(tl)
         
@@ -109,5 +122,8 @@ class MarkdownTable:
             
             for line in rf.nextRow().lines:
                 print( line )
+            
+            if self.rowDiv is not None:
+                print( df.getSimpleDivider(self.rowDiv) )
 
             

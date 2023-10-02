@@ -7,6 +7,10 @@ def main():
     mdt.addCol('addr')
     mdt.cols['addr'].maxWidth = 15
 
+    mdt.startDiv = '-'
+    mdt.headerDiv = '='
+    mdt.rowDiv = '-'
+    
     mdt.addCol(
         key='comment',
         title='Comment',
@@ -25,6 +29,7 @@ def main():
     #print( mdt.calcColWidths() )    
     
     mdt.render()
+    
     
 if __name__ == '__main__':
     main()
