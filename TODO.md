@@ -1,7 +1,24 @@
 
 # TODO
 
+MarkdownTable.render() should yield the lines, not print() them.
+
 Add something to DividerFactory to implement MD table justification
+
+Rename. 'mdtable' is already taken per pypi. alternates:
+- mdtablegen
+- mdtgen
+
+write tests against prior sanitized segmentation test reports.
+
+## other data inputs
+
+rename MarkdownTable.addRow() to addData()
+
+accept lists. assume data are in the same order as columns were added.
+
+accept iterators (i.e. from csvfile)
+
 
 # Done
 
