@@ -1,8 +1,8 @@
 
 import collections
-from mdtablegen_xelphene.layout import TableLayout, ColumnLayout
-from mdtablegen_xelphene.rowfactory import RowFactory
-from mdtablegen_xelphene.divfactory import DividerFactory
+from mdtablegen.layout import TableLayout, ColumnLayout
+from mdtablegen.rowfactory import RowFactory
+from mdtablegen.divfactory import DividerFactory
 
 class NoSuchColumnError(Exception):
     def __self__(self, key):
