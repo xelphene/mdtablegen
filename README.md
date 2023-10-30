@@ -1,5 +1,5 @@
 
-# About mdtable
+# About mdtablegen
 
 This is a Python module to generate Markdown tables. Specifically the
 Markdown dialect that HL docgen (and derivatives) speak. A few existing

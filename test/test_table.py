@@ -1,5 +1,5 @@
 
-from mdtable.table import MarkdownTable
+from mdtablegen.table import MarkdownTable
 
 def main():
     mdt = MarkdownTable()

@@ -1,8 +1,8 @@
 
 import collections
-from mdtable.layout import TableLayout, ColumnLayout
-from mdtable.rowfactory import RowFactory
-from mdtable.divfactory import DividerFactory
+from mdtablegen.layout import TableLayout, ColumnLayout
+from mdtablegen.rowfactory import RowFactory
+from mdtablegen.divfactory import DividerFactory
 
 class NoSuchColumnError(Exception):
     def __self__(self, key):

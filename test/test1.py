@@ -1,7 +1,7 @@
 
-from mdtable.layout import TableLayout
-from mdtable.layout import ColumnLayout
-from mdtable.rowfactory import RowFactory
+from mdtablegen.layout import TableLayout
+from mdtablegen.layout import ColumnLayout
+from mdtablegen.rowfactory import RowFactory
 
 def main():
     ts = TableLayout()
