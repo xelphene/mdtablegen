@@ -1,1 +1,3 @@
 __pycache__/
+dist/
+src/mdtablegen_xelphene.egg-info/

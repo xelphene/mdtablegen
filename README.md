@@ -20,7 +20,3 @@ Python Markdown generator libraries don't exactly do this.
 | 172.22.30.119 | 22/tcp   | ssh       | ProFTPD mod_sftp ... |                            |
 ```
 
-# Future Dev
-
-I intend to publish this publicly once it is fully working and
-divorced from any internal HL-specific stuff.
