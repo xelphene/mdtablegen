@@ -1,8 +1,8 @@
 
 import collections
-from mdtablegen.layout import TableLayout, ColumnLayout
-from mdtablegen.rowfactory import RowFactory
-from mdtablegen.divfactory import DividerFactory
+from mdtablegen_xelphene.layout import TableLayout, ColumnLayout
+from mdtablegen_xelphene.rowfactory import RowFactory
+from mdtablegen_xelphene.divfactory import DividerFactory
 
 class NoSuchColumnError(Exception):
     def __self__(self, key):
@@ -104,16 +104,16 @@ class MarkdownTable:
         df = DividerFactory(tl)
         
         if self.startDiv is not None:
-            print( df.getSimpleDivider(self.startDiv) )
+            yield df.getSimpleDivider(self.startDiv)
         
         hf = RowFactory(tl, allowWrap=False)
         for colKey in self.cols.keys():
             hf[colKey] = self.cols[colKey].title
         for line in hf.nextRow().lines:
-            print( line )
+            yield line
         
         if self.headerDiv is not None:
-            print( df.getSimpleDivider(self.headerDiv) )
+            yield df.getSimpleDivider(self.headerDiv)
         
         rf = RowFactory(tl)
         
@@ -121,9 +121,9 @@ class MarkdownTable:
             rf.setData(rd)
             
             for line in rf.nextRow().lines:
-                print( line )
+                yield line
             
             if self.rowDiv is not None:
-                print( df.getSimpleDivider(self.rowDiv) )
+                yield df.getSimpleDivider(self.rowDiv)
 
             

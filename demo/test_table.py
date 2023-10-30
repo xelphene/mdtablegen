@@ -1,5 +1,5 @@
 
-from mdtablegen.table import MarkdownTable
+from mdtablegen_xelphene.table import MarkdownTable
 
 def main():
     mdt = MarkdownTable()
@@ -28,7 +28,8 @@ def main():
 
     #print( mdt.calcColWidths() )    
     
-    mdt.render()
+    for line in mdt.render():
+        print(line)
     
     
 if __name__ == '__main__':

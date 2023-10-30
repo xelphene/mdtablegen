@@ -1,6 +1,6 @@
 
 import textwrap
-from mdtablegen.render import RenderedRow
+from mdtablegen_xelphene.render import RenderedRow
 
 class RowFactory:
     def __init__(self, tableLayout, allowWrap=True):

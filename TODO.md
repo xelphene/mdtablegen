@@ -1,17 +1,17 @@
 
 # TODO
 
-MarkdownTable.render() should yield the lines, not print() them.
+## soon
+
+## later
+
+### misc
 
 Add something to DividerFactory to implement MD table justification
 
-Rename. 'mdtable' is already taken per pypi. alternates:
-- mdtablegen
-- mdtgen
-
 write tests against prior sanitized segmentation test reports.
 
-## other data inputs
+### other data inputs
 
 rename MarkdownTable.addRow() to addData()
 
@@ -29,3 +29,7 @@ accept iterators (i.e. from csvfile)
     - has 'lines' property yields rendered line strings, like RenderedRow
   - getHeaderDivider()
     - heeds MD table justification rules
+
+Rename. 'mdtable' is already taken per pypi. Rename to mdtablegen.
+
+MarkdownTable.render() should yield the lines, not print() them.
