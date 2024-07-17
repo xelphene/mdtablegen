@@ -31,8 +31,8 @@ class RowFactory:
 
         if len(value) > self.getMaxFieldDataLen(colKey):
             if not self.allowWrap:
-                raise Exception('data %s is too long for column %s (allowWrap=False)' % (
-                    repr(value), colKey
+                raise Exception('data %s is too long for column %s (allowWrap=False, max=%d)' % (
+                    repr(value), colKey, self.getMaxFieldDataLen(colKey)
                 ))
             self._data[colKey]['wrapped'] = textwrap.wrap(
                 value,

@@ -66,7 +66,12 @@ class MarkdownTable:
     def calcColWidths(self):
         colWidths = {}
         for colKey in self.cols.keys():
-            colWidths[colKey] = 0
+            #colWidths[colKey] = 0
+            colWidths[colKey] = (
+                len(self.cols[colKey].title) +
+                len(self.cols[colKey].lPad) +
+                len(self.cols[colKey].rPad)
+            )
         
         for rd in self.iterRowData():
             for colKey in self.cols.keys():
